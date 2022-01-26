@@ -2,14 +2,12 @@
 def safe_print_division(a, b):
     try:
         result = a / b
-        return(result)
     except ZeroDivisionError:
         result = None
     finally:
-        print("Inside result: {}".format(result))
+        print('Inside result: {}'.format(result))
+    return result
 if __name__ == "__main__":
-    safe_print_division = __import__('3-safe_print_division').safe_print_division
-
     a = 12
     b = 2
     result = safe_print_division(a, b)
