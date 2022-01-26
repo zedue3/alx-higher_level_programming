@@ -1,9 +1,21 @@
 #!/usr/bin/python3
 def safe_print_list(my_list=[], x=0):
-    try:
-        if x < len(my_list):
-            return my_list(x)
-        else:
-            return my_list
-    except:
-        return my_list
+    for i in range(x):
+        try:
+            print("{}".format(my_list[i]), end="")
+        except:
+            print()
+            return i
+        print()
+        return i + 1
+if __name__ == "__main__":
+    safe_print_list = __import__('0-safe_print_list').safe_print_list
+
+    my_list = [1, 2, 3, 4, 5]
+
+    nb_print = safe_print_list(my_list, 2)
+    print("nb_print: {:d}".format(nb_print))
+    nb_print = safe_print_list(my_list, len(my_list))
+    print("nb_print: {:d}".format(nb_print))
+    nb_print = safe_print_list(my_list, len(my_list) + 2)
+    print("nb_print: {:d}".format(nb_print))
