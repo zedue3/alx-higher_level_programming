@@ -8,7 +8,7 @@ def safe_print_list_integers(my_list=[], x=0):
         except (ValueError, TypeError):
             pass
     print()
-    return count
+    return(count)
 if __name__ == "__main__":
     safe_print_list_integers = \
     __import__('2-safe_print_list_integers').safe_print_list_integers
