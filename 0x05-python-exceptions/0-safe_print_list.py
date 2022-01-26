@@ -8,7 +8,7 @@ def safe_print_list(my_list=[], x=0):
         except:
             break
     print()
-    return count
+    return(count)
 if __name__ == "__main__":
     safe_print_list = __import__('0-safe_print_list').safe_print_list
 
